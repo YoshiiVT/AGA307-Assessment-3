@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class FlashlightManager : GameBehaviour
 {
+    public int batteries;    
     
+
     public GameObject flashLight;
     private bool flashLightOn = false;
     public float maxBatteryPercentage;
@@ -29,6 +31,13 @@ public class FlashlightManager : GameBehaviour
                 FlashlightToggle();
             }
         }
+
+        if (Input.GetButtonDown("Reload") && batteryPercentage >= 0 && batteries >= 1)
+        {
+            batteryPercentage = 100;
+            batteries--;
+        }
+
 
         batteryBar.fillAmount = batteryPercentage / maxBatteryPercentage;
     }
