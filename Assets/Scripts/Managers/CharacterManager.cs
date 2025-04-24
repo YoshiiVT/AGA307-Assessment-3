@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterManager : GameBehaviour
+public class CharacterManager : Singleton<CharacterManager>
 {
     public CharacterController controller;
 
@@ -25,6 +26,9 @@ public class CharacterManager : GameBehaviour
     [Header("Stamina")]
     public float stamina, maxStamina;
     public Image staminaBar;
+
+    [Header("Living")]
+    public bool isAlive = true;
 
     // For sprinting state
     private bool isSprinting = false;
@@ -125,5 +129,10 @@ public class CharacterManager : GameBehaviour
     {
         isSprinting = false;
         currentSpeed = speed;  // Reset speed to normal
+    }
+    public void CaughtPlayer()
+    {
+        Debug.Log("You Have Beem Caught");
+        isAlive = false;
     }
 }

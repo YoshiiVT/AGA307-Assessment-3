@@ -2,15 +2,6 @@ using UnityEngine;
 
 public class GameBehaviour : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected static CharacterManager _PLAYER { get { return CharacterManager.instance; } }
+    protected static MonsterManager _MONSTER { get { return MonsterManager.instance; } }
 }
