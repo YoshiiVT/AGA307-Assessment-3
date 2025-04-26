@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class FuseboxManager : MonoBehaviour
+public class FuseboxManager : Singleton<FuseboxManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void LightsOff(GameObject room)
     {
-        
+        room.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LightsOn(GameObject room)
     {
-        
+        room.SetActive(true);
     }
 }
