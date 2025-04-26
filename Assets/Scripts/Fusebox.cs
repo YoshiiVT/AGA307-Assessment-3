@@ -10,6 +10,8 @@ public enum FixQuality
 
 public class Fusebox : GameBehaviour
 {
+    [Header("Animation References")]
+    [SerializeField] private Animator animator;
     //References to the roomlights the fusebox is attatched too.
     [Header("Fusebox Room Match")]
     [SerializeField] private GameObject lights;
@@ -20,7 +22,7 @@ public class Fusebox : GameBehaviour
 
     //Simple Bool to let me know what the status of the fusebox is.
     [Header("FuseBox Status")]
-    [SerializeField] private bool isBroken = false;
+    public bool isBroken = false;
 
     public void Start()
     {
@@ -89,6 +91,7 @@ public class Fusebox : GameBehaviour
         {
             isBroken = true;
             _FM.LightsOff(lights);
+            animator.SetTrigger("OffTrigger");
         }
         else
         {
@@ -105,6 +108,7 @@ public class Fusebox : GameBehaviour
     //This function runs when the player resets the fusebox.
     private void FuseBoxFixed()
     {
+        animator.SetTrigger("OnTrigger");
         isBroken = false;
         _FM.LightsOn(lights);
         SetFailTimer();
