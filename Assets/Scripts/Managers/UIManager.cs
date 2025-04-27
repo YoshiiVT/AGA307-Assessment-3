@@ -1,16 +1,22 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class UIManager : SingletonDontDestroy<UIManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Play()
     {
-        
+        _GM.Playing();
+        SceneManager.LoadScene("House");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void QuitGame()
     {
-        
+        Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
+

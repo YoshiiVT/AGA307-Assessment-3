@@ -4,17 +4,23 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FlashlightManager : GameBehaviour
+public class FlashlightManager : Singleton<FlashlightManager>
 {
     public int batteries;    
     
 
     public GameObject flashLight;
-    private bool flashLightOn = false;
+
     public float maxBatteryPercentage;
     public float batteryPercentage;
     private Coroutine batteryDrainCoroutine;
     public Image batteryBar;
+
+    [Header("Flashlight Status")]
+    [SerializeField] private bool flashLightOn = false;
+
+    // Public read-only property
+    public bool _flashLightOn => flashLightOn;
 
     void Update()
     {

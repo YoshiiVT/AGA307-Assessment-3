@@ -222,10 +222,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6603339976487454643, guid: c685fcb6284a049488295af79267a2be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1498324591634065312}
+    - targetCorrespondingSourceObject: {fileID: 6603339976487454643, guid: c685fcb6284a049488295af79267a2be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5999456147982129429}
   m_SourcePrefab: {fileID: 100100000, guid: c685fcb6284a049488295af79267a2be, type: 3}
 --- !u!4 &2272185702680417772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7200078210613733306, guid: c685fcb6284a049488295af79267a2be, type: 3}
   m_PrefabInstance: {fileID: 8963214561324151382}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2864424188355966437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6603339976487454643, guid: c685fcb6284a049488295af79267a2be, type: 3}
+  m_PrefabInstance: {fileID: 8963214561324151382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1498324591634065312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864424188355966437}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000000013404579, y: 0.0024109483, z: 2.6255386}
+--- !u!114 &5999456147982129429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864424188355966437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438be1a5f923bb9428286163ee09d897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  lights: {fileID: 0}
+  quality: 0
+  isBroken: 0

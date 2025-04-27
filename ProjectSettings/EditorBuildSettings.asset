@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AITest.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/MainMenu.unity
+    guid: 08e98af741409fc43b16fd93988368b9
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: 540778c5713b6b544817988815e5033e
+  - enabled: 1
+    path: Assets/Scenes/VictoryTitleCard.unity
+    guid: 1c74a46200ca8834ab6f96c765bac347
+  - enabled: 1
+    path: Assets/Scenes/Jumpscare.unity
+    guid: c045a02ef36292740852d8e6c65ccf23
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 85682209927011a4299cd70e73bff120
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

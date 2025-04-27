@@ -38,7 +38,7 @@ public class CharacterManager : Singleton<CharacterManager>
 
     private void Start()
     {
-        sprintSpeed = speed * 2;
+        sprintSpeed = speed * 1.2f;
         currentSpeed = speed;  // Start with normal speed
     }
 
@@ -132,6 +132,7 @@ public class CharacterManager : Singleton<CharacterManager>
     }
     public void CaughtPlayer()
     {
+        _GM.Jumpscare();
         Debug.Log("You Have Beem Caught");
         isAlive = false;
     }
