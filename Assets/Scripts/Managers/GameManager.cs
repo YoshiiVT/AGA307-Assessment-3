@@ -21,8 +21,12 @@ public class GameManager : SingletonDontDestroy<GameManager>
 
     [Header("Timer Variables")]
     [SerializeField] private float timeLeft = 180f;
+    private float timeSave;
 
-
+    private void Start()
+    {
+        timeSave = timeLeft;
+    }
 
     private void Update()
     { 
@@ -52,12 +56,13 @@ public class GameManager : SingletonDontDestroy<GameManager>
     {
         Cursor.lockState = CursorLockMode.None;
         gameState = GameState.Victory;
-        timeLeft = 180f;
+        timeLeft = timeSave;
         SceneManager.LoadScene("VictoryTitleCard");
     }
 
     public void Jumpscare()
     {
+        timeLeft = timeSave;
         Cursor.lockState = CursorLockMode.None;
         gameState = GameState.Jumpscare;
         SceneManager.LoadScene("Jumpscare");
